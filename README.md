@@ -1,14 +1,14 @@
-# State of Data Brasil | AWS Data Engineering & Market Intelligence
+# Brazil Data Market Intelligence: AWS Data Pipeline & Analytics
 
-**FIAP Tech Challenge · Phase 3 · Amazon S3 · AWS Glue · Athena · PySpark**
+**Applied Data Engineering Study · Amazon S3 · AWS Glue · Athena · PySpark**
 
-An end-to-end data engineering and analytics project that consolidates three editions of the State of Data Brasil survey into a traceable analytical foundation for studying Brazil's data, analytics, and AI workforce.
+An applied data engineering and market intelligence study that consolidates three editions of the State of Data Brasil survey into a traceable analytical foundation for studying Brazil's data, analytics, and AI workforce.
 
 The work spans **cloud architecture, ingestion, schema harmonization, data quality, distributed transformations, analytical tables, visual reporting, and executive recommendations**. A local reproduction path makes the indicators inspectable without AWS credentials.
 
 **14,002 unique survey responses · 3 editions · 457-row manual crosswalk · 9 analytical views · 17-page executive report**
 
-[Executive report](docs/tech-challenge-phase-3-executive-report.pdf) · [AWS pipeline](aws_pipeline/) · [Treatment notebook](tratamento_dados/01_pipeline_tratamento_consolidacao.ipynb) · [Chart gallery](saidas/) · [Run locally](#reproduce-the-indicators-locally)
+[Executive report](docs/brazil-data-market-executive-report.pdf) · [AWS pipeline](aws_pipeline/) · [Treatment notebook](tratamento_dados/01_pipeline_tratamento_consolidacao.ipynb) · [Chart gallery](saidas/) · [Run locally](#reproduce-the-indicators-locally)
 
 ![AWS architecture connecting ingestion, transformation, storage, and analytical consumption](AWS/arquitetura-aws.png)
 
@@ -166,7 +166,7 @@ Local preparation also explicitly corrects technology-column semantics for earli
 
 ## Executive findings and decisions they inform
 
-The [17-page executive report](docs/tech-challenge-phase-3-executive-report.pdf) brings together architecture evidence, analytical charts, interpretation, opportunities, and conclusions.
+The [17-page executive report](docs/brazil-data-market-executive-report.pdf) brings together architecture evidence, analytical charts, interpretation, opportunities, and conclusions.
 
 | Finding in the report | Decision relevance |
 |---|---|
@@ -180,9 +180,9 @@ The [17-page executive report](docs/tech-challenge-phase-3-executive-report.pdf)
 
 These are findings from the observed survey participants and the project's historical snapshot. They support strategic discussion, rather than proving population-wide labor-market changes or the impact of a particular business intervention.
 
-### AI analysis and applied machine learning in the project series
+### Relationship to the machine learning study
 
-This phase studies **reported AI adoption and LLM project maturity**. It does not train an LLM or deploy a predictive model. The applied machine learning workflow—training, class weighting, evaluation, and interpretation—is documented in [Phase 2](https://github.com/joaomottin/TechChallenge-Fase2).
+This study analyzes **reported AI adoption and LLM project maturity**. It does not train an LLM or deploy a predictive model. The applied machine learning workflow—training, class weighting, evaluation, and interpretation—is documented in [the wine quality study](https://github.com/joaomottin/wine-quality-machine-learning).
 
 ## Comparability and data quality decisions
 
@@ -231,7 +231,7 @@ AWS scripts require Glue, S3 resources, catalog setup, IAM permissions, job argu
 
 | Artifact | Purpose |
 |---|---|
-| [Executive report](docs/tech-challenge-phase-3-executive-report.pdf) | Original 17-page technical and business narrative |
+| [Executive report](docs/brazil-data-market-executive-report.pdf) | Original 17-page technical and business narrative |
 | [Treatment notebook](tratamento_dados/01_pipeline_tratamento_consolidacao.ipynb) | Profiling, schema alignment, transformations, consolidation, and validation |
 | [Manual crosswalk](tratamento_dados/02_crosswalk_manual.csv) | Auditable question equivalence across editions |
 | [AWS pipeline](aws_pipeline/) | Ingestion, Silver, Gold, and reporting scripts plus Glue exports |
@@ -257,22 +257,22 @@ gerar_todos.py          Consolidated local runner
 requirements.txt        Python dependencies
 ```
 
-## Project series
+## Related studies
 
-| Phase | Focus | Repository |
+These collaborative studies explore complementary problems in business analytics, machine learning, and data engineering.
+
+| Study | Focus | Repository |
 |---|---|---|
-| 1 | Marketplace analytics, satisfaction metrics, and executive recommendations | [Olist seller analysis](https://github.com/joaomottin/TechChallenge-Fase1) |
-| 2 | Supervised learning, imbalanced classification, and model interpretation | [Wine quality](https://github.com/joaomottin/TechChallenge-Fase2) |
-| 3 | Cloud architecture, distributed data preparation, and market intelligence | [State of Data Brasil](https://github.com/joaomottin/TechChallenge-Fase3) |
+| Olist seller performance | Marketplace analytics, customer satisfaction, and executive recommendations | [Explore the study](https://github.com/joaomottin/olist-seller-performance-analysis) |
+| Wine quality prediction | Supervised learning, imbalanced classification, and model interpretation | [Explore the study](https://github.com/joaomottin/wine-quality-machine-learning) |
+| Brazil data market intelligence | AWS architecture, distributed data preparation, and analytical reporting | [Explore the study](https://github.com/joaomottin/brazil-data-market-aws-pipeline) |
 
-## Team
+## Collaborators
 
-Developed collaboratively for FIAP.
+Developed collaboratively as part of the FIAP postgraduate program.
 
-| Contributor | Student ID |
-|---|---|
-| Felipe Macedo da Silva | RM373436 |
-| João Pedro Mezzadri Mottin | RM372545 |
-| Miguel Fernandes Martins de Bastos | RM373815 |
-| Thanael Butewicz | RM373935 |
-| Verônica de Fátima Machado Silva | RM371976 |
+- Felipe Macedo da Silva
+- João Pedro Mezzadri Mottin
+- Miguel Fernandes Martins de Bastos
+- Thanael Butewicz
+- Verônica de Fátima Machado Silva
